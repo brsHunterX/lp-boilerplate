@@ -1,0 +1,51 @@
+{
+  "name": "lp-boilerplate",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "Boilerplate that facilitates the creation of landing pages for the web.",
+  "author": "Bruno Santos <bruno.dos1997@gmail.com>",
+  "type": "module",
+  "main": "./dist/bundle.js",
+  "files": [
+    "./dist"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "autoprefixer": "^10.4.14",
+    "browser-sync": "^2.29.1",
+    "cssnano": "^6.0.0",
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-prettier": "^4.2.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-file-include": "^2.3.0",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-svgstore": "^9.0.0",
+    "gulp-terser": "^2.1.0",
+    "imagemin": "^8.0.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.8.8",
+    "stylelint": "^15.6.1",
+    "stylelint-config-standard": "^33.0.0",
+    "tailwindcss": "^3.3.2"
+  },
+  "scripts": {
+    "prettier": "npx prettier ./src --check",
+    "prettier:fix": "npx prettier ./src --write",
+    "eslint": "npx eslint ./src/**/*.{js,jsx,ts,tsx}",
+    "eslint:fix": "npx eslint ./src/**/*.{js,jsx,ts,tsx} --fix",
+    "stylelint": "npx stylelint ./src/**/*.css",
+    "stylelint:fix": "npx stylelint ./src/**/*.css --fix",
+    "gulp:serve": "npx gulp serve",
+    "gulp:build": "npx gulp build",
+    "serve": "run-p prettier:fix eslint:fix stylelint:fix gulp:serve",
+    "build": "run-s prettier:fix eslint:fix stylelint:fix gulp:build"
+  },
+  "dependencies": {}
+}
